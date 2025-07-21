@@ -1,0 +1,16 @@
+/* Cosmic Theme CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0b0f1f, #1a1a2e, #16213e);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+}
+
