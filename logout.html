@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAZ - Logout</title>
+    <link rel="stylesheet" href="css/logout.css">
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="cosmic-logout">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="pulsar"></div>
+        
+        <div class="logout-container">
+            <div class="logo">
+                <span class="gradient-text">MAZ</span>
+                <div class="tagline">MAZ Journey Completed</div>
+            </div>
+            
+            <div class="message">
+                You've been logged out of the maz network
+            </div>
+            
+            <div class="countdown">Redirecting in <span id="count">5</span> seconds</div>
+            
+            <button id="login-again">Login Again</button>
+            
+            <div class="footer">
+                <div>Copyright 2025 MAZ</div>
+                <div class="powered">Powered By <span class="gradient-text">MAZ</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/logout.js"></script>
+</body>
+</html>
