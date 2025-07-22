@@ -3,43 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAZ - Login</title>
+    <title>MAZ | Login</title>
     <link rel="stylesheet" href="css/login.css">
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="js/login.js" defer></script>
 </head>
 <body>
-    <div class="maz-login">
+    <div class="cosmic-container">
         <div class="stars"></div>
-        <div class="twinkling"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
         
-        <div class="login-container">
+        <div class="login-card">
             <div class="logo">
-                <span class="gradient-text">MAZ</span>
-                <div class="tagline">MAZ AI Chatbot</div>
+                <div class="galaxy"></div>
+                <h1>MAZ</h1>
             </div>
             
             <form id="login-form">
                 <div class="input-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" required placeholder="Enter your email">
+                    <input type="email" id="email" required placeholder="user@example.com">
                 </div>
                 
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" required placeholder="Enter your password">
+                    <input type="password" id="password" required placeholder="••••••••">
                 </div>
                 
-                <button type="submit" class="login-btn">Login to the MAZ</button>
+                <button type="submit">Enter MAZ</button>
             </form>
             
-            <div class="footer">
-                <div>Copyright 2025 MAZ</div>
-                <div class="powered">Powered By MAZ<span class="gradient-text">MAZ</span></div>
-            </div>
+            <div id="error-message" class="error"></div>
         </div>
+        
+        <div class="nebula"></div>
     </div>
-
-    <script src="js/login.js"></script>
 </body>
 </html>
