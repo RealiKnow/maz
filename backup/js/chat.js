@@ -14,8 +14,8 @@ const auth = firebase.auth();
 
 // Gemini API setup
 const GEMINI_API_KEY = "AIzaSyCa4oS6AnLLRZJsC3HBIvEeAwzYRhGdUg4";
-const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash"});
+const genAI = new googleGenerativeAI.GoogleGenerativeAI(GEMINI_API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
 
 // DOM Elements
 const chatMessages = document.getElementById('chat-messages');
@@ -26,6 +26,7 @@ const logoutBtn = document.getElementById('logout-btn');
 // Check auth state
 auth.onAuthStateChanged((user) => {
     if (!user) {
+        // Redirect to login if not authenticated
         window.location.href = 'login';
     } else {
         // Add welcome message
@@ -44,7 +45,7 @@ async function sendMessage() {
     
     try {
         // Show loading indicator
-        const loadingMsg = addBotMessage("Thinking about the cosmos...", true);
+        const loadingMsg = addBotMessage("Thinking about the MAZ...", true);
         
         // Get response from Gemini
         const result = await model.generateContent(message);
