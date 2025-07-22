@@ -3,48 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAZ - Chat</title>
+    <title>MAZ | Chat</title>
     <link rel="stylesheet" href="css/chat.css">
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@google/generative-ai"></script>
+    <script src="https://unpkg.com/@google/generative-ai/dist/index.js" defer></script>
+    <script src="js/chat.js" defer></script>
 </head>
 <body>
     <div class="cosmic-chat">
         <div class="stars"></div>
-        <div class="twinkling"></div>
-        <div class="nebulae"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
         
         <header>
             <div class="logo">
-                <span class="gradient-text">MAZ</span>
-                <div class="tagline">MAZ AI Chatbot</div>
+                <div class="pulsar"></div>
+                <h1>MAZ</h1>
+                <span class="subtitle">MAZ Intelligence</span>
             </div>
-            <button id="logout-btn">Logout</button>
+            <button id="logout-btn">Exit MAZ</button>
         </header>
         
         <div class="chat-container">
-            <div id="chat-messages" class="chat-messages">
-                <!-- Messages will appear here -->
+            <div id="chat-history" class="chat-history">
+                <div class="message ai-message">
+                    <div class="avatar">🌌</div>
+                    <div class="content">
+                        <div class="text">Greetings, cosmic traveler! I am MAZ, your guide through the celestial realms. What mysteries of the universe shall we explore today?</div>
+                    </div>
+                </div>
             </div>
             
             <div class="input-area">
-                <input type="text" id="user-input" placeholder="Ask about the MAZ..." autocomplete="off">
-                <button id="send-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                    </svg>
-                </button>
+                <input 
+                    type="text" 
+                    id="user-input" 
+                    placeholder="Ask about black holes, exoplanet..." 
+                    autocomplete="off"
+                >
+                <button id="send-btn">Send</button>
             </div>
         </div>
         
-        <div class="footer">
-            <div>Copyright 2025 MAZ</div>
-            <div class="powered">Powered By MAZ<span class="gradient-text">MAZ</span></div>
-        </div>
+        <div class="galactic-center"></div>
     </div>
-
-    <script src="js/chat.js"></script>
 </body>
 </html>
