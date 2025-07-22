@@ -21,7 +21,7 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
     auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
             // Redirect to chat page
-            window.location.href = 'chat.html';
+            window.location.href = 'chat';
         })
         .catch((error) => {
             alert("Login failed: " + error.message);
