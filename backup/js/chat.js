@@ -26,10 +26,10 @@ const logoutBtn = document.getElementById('logout-btn');
 // Check auth state
 auth.onAuthStateChanged((user) => {
     if (!user) {
-        window.location.href = 'login.html';
+        window.location.href = 'login';
     } else {
         // Add welcome message
-        addBotMessage("Welcome to MAZ Cosmic Chat! I'm your AI guide to the universe. Ask me anything about space, stars, galaxies, or cosmic phenomena!");
+        addBotMessage("Welcome to MAZ Chat! I'm your AI guide to the universe. Ask me anything about space, stars, galaxies, or cosmic phenomena!");
     }
 });
 
@@ -76,7 +76,7 @@ function addBotMessage(text, isTemp = false) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message bot-message ${isTemp ? 'temp-message' : ''}`;
     messageDiv.innerHTML = `
-        <div class="message-header">Cosmic AI</div>
+        <div class="message-header">MAZ AI</div>
         <div class="message-text">${text}</div>
     `;
     chatMessages.appendChild(messageDiv);
@@ -87,7 +87,7 @@ function addBotMessage(text, isTemp = false) {
 // Replace temporary loading message
 function replaceLoadingMessage(messageElement, text) {
     messageElement.innerHTML = `
-        <div class="message-header">Cosmic AI</div>
+        <div class="message-header">MAZ AI</div>
         <div class="message-text">${text}</div>
     `;
     messageElement.classList.remove('temp-message');
@@ -107,7 +107,7 @@ userInput.addEventListener('keypress', (e) => {
 
 logoutBtn.addEventListener('click', () => {
     auth.signOut().then(() => {
-        window.location.href = 'logout.html';
+        window.location.href = 'logout';
     });
 });
 
