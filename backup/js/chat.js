@@ -15,7 +15,7 @@ const auth = firebase.auth();
 // Gemini API setup
 const GEMINI_API_KEY = "AIzaSyCa4oS6AnLLRZJsC3HBIvEeAwzYRhGdUg4";
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash"});
 
 // DOM Elements
 const chatMessages = document.getElementById('chat-messages');
