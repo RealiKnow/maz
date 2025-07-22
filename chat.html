@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAZ - Chat</title>
+    <link rel="stylesheet" href="css/chat.css">
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <!-- Google Gemini -->
+    <script src="https://cdn.jsdelivr.net/npm/@google/generative-ai"></script>
+</head>
+<body>
+    <div class="cosmic-chat">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="nebulae"></div>
+        
+        <header>
+            <div class="logo">
+                <span class="gradient-text">MAZ</span>
+                <div class="tagline">MAZ AI Chatbot</div>
+            </div>
+            <button id="logout-btn">Logout</button>
+        </header>
+        
+        <div class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <!-- Messages will appear here -->
+            </div>
+            
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Ask about the cosmos..." autocomplete="off">
+                <button id="send-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div>Copyright 2025 MAZ</div>
+            <div class="powered">Powered By <span class="gradient-text">MAZ</span></div>
+        </div>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>
